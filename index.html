@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MotoLover OF</title>
+  <link rel="stylesheet" href="module.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>MotoLover</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Покупка</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Любовь...</h1>
+    <h3>"Это страсть к мототехники"</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Привыкли жить на высокой скорости? Тогда вам к нам!</h2>
+      <span>Большой выбор всего, что может вам пригодиться</span>
+    </div>
+    <div class="text">
+      <span>Мотоцикл как транспортное средство известен давно. А это значит, что всегда были актуальны мотозапчасти. Желающих их купить предостаточно. Такое явление сегодня встречается всё реже, но были времена, когда к мотоциклу прикрепляли коляску, и он выполнял бытовые задачи. На нём перевозили груз и даже использовали для семейных поездок. Чисто транспортные функции мотоцикла не утрачены и сегодня. Например, на нём очень удобно ехать на работу — и выглядит это эффектно. В таких случаях владельцу обязательно следует знать, где купить запчасти для мотоциклов. Причём очень важно, чтобы они были оригинальными — транспорт корректно будет работать после их замены. Запчасти купить реально, и их не надо «доставать», как было принято в советское время. Поможет специализированный интернет-магазин «Мегазип».</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <h4>с нами все проще</h4>
+
+    <div class="img">
+      <img src="https://avatars.mds.yandex.net/get-zen_doc/3756876/pub_5f493e3f8997d74f22f8d800_5f493eef157070066d9fea54/scale_1200" alt="">
+      <span>Приобрести мечту своего детства</span>
+    </div>
+    <div class="img">
+      <img src="https://sc01.alicdn.com/kf/HTB1fIwGCrGYBuNjy0Foq6AiBFXa6.jpg" alt="">
+      <span>Запчасти для твоей Любви ;)</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Напиши нам сейчас</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Как будет проходит оплата?</span>
+      <p>В приоритете использование безналичной формы оплаты. Наличный оборот денежных средств постепенно отходит на второй план: в торговых точках, продуктовых сетях, общественном транспорте, в государственных и муниципальных органах в большей степени используется безналичная оплата.</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">Что входит в услуги сервиса</span>
+      <p>Подготовка мотоцикла ремонт и технический осмотр. Предсезонная и сервисно-техническая подготовка мототехники — Включает в себя замену всех расходных материалов и жидкостей, детальную регулировку всех механизмов и рекомендации по дальнейшему техническому обслуживанию вашего мотоцикла, некоторые ремонтные работы и многое другое.</p>
+    </div>
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">Какие гарантии есть</span>
+      <p>Гарантийный период – это временной интервал, в течение которого покупатель при обнаружении в приобретенном товаре или услуге недостатка имеет право обратиться к изготовителю или продавцу с требованием об устранении дефекта, возврате или обмена покупки или снижении цены на стоимость имеющегося недостатка.</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
